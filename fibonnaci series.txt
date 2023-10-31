@@ -1,0 +1,28 @@
+//fibonnaci series = 0,1,1,2,3,5,8,13,21,....
+
+//finding 'n'th terms value 
+
+#include<iostream>
+using namespace std;
+
+int fibonnaci(int n) {
+    if(n==0)
+    return 0;
+    if(n==1)
+    return 1;
+    return fibonnaci(n-1)+fibonnaci(n-2);  //formula
+    
+}
+
+int main(){
+    
+    int n;
+    cout<<"Enter term : "<<endl;
+    cin>>n;
+    
+    int ans = fibonnaci(n);
+    cout<<ans;
+    
+    return 0;
+}
+

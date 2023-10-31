@@ -1,0 +1,47 @@
+//linear search by recursion
+
+#include<iostream>
+using namespace std;
+
+bool linearSearch(int array[] , int size , int key ){
+    
+    
+    if(size==0)         //base case
+    return false;
+    
+    if(array[0]==key)
+    return true;
+    
+    int remaining = linearSearch(array+1,size-1,key);
+    return remaining;
+}
+
+int main(){
+    
+    int size;
+    cout<<"Enter size : "<<endl;
+    cin>>size;
+    
+    int array[size];
+    cout<<"Enter elements of array  : "<<endl;
+    for(int i=0;i<size;i++){
+        cin>>array[i];
+    }
+    
+    int key;
+    cout<<"Enter key : "<<endl;
+    cin>>key;
+    
+    bool ans = linearSearch(array,size, key);
+    
+    if(ans){
+        cout<<"Present" <<endl;
+    }
+    else{
+        cout<<"Not Present "<<endl;
+    }
+    
+    
+    
+    return 0;
+}
