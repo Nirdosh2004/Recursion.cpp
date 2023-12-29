@@ -1,4 +1,4 @@
-// binary tree insertion and level order traversal 
+// binary tree insertion and traversal 
 
 #include<bits/stdc++.h>
 #include<queue>
